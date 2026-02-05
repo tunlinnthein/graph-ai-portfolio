@@ -1,829 +1,415 @@
 <!DOCTYPE html>
-
 <html lang="en" class="scroll-smooth">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Tun Linn Thein | Generative AI Portfolio</title>
-
     
-
     <!-- Tailwind CSS -->
-
     <script src="https://cdn.tailwindcss.com"></script>
-
     
-
     <!-- Font Awesome for Icons -->
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     
-
     <!-- Google Fonts -->
-
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
-
-
     <script>
-
         tailwind.config = {
-
             theme: {
-
                 extend: {
-
                     fontFamily: {
-
                         sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-
                         heading: ['"Outfit"', 'sans-serif'],
-
                     },
-
                     colors: {
-
                         ai: {
-
                             dark: '#0f172a',
-
                             primary: '#3b82f6',
-
                             secondary: '#8b5cf6',
-
                             accent: '#06b6d4'
-
                         }
-
                     },
-
                     backgroundImage: {
-
                         'hero-pattern': "linear-gradient(to right bottom, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')",
-
                     }
-
                 }
-
             }
-
         }
-
     </script>
 
-
-
     <style>
-
         /* Custom Utilities */
-
         .glass-card {
-
             background: rgba(255, 255, 255, 0.03);
-
             backdrop-filter: blur(10px);
-
             border: 1px solid rgba(255, 255, 255, 0.1);
-
         }
-
         
-
         .gradient-text {
-
             background: linear-gradient(135deg, #60a5fa, #c084fc);
-
             -webkit-background-clip: text;
-
             -webkit-text-fill-color: transparent;
-
         }
-
-
 
         .hover-card {
-
             transition: all 0.3s ease;
-
         }
-
         .hover-card:hover {
-
             transform: translateY(-5px);
-
             border-color: rgba(139, 92, 246, 0.5);
-
             box-shadow: 0 10px 30px -10px rgba(139, 92, 246, 0.3);
-
         }
-
     </style>
-
 </head>
-
 <body class="bg-ai-dark text-slate-300 font-sans antialiased selection:bg-ai-secondary selection:text-white">
 
-
-
     <!-- Navigation -->
-
     <nav class="fixed w-full z-50 glass-card border-b border-white/10 top-0">
-
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
             <div class="flex items-center justify-between h-16">
-
                 <div class="flex-shrink-0 font-heading font-bold text-xl text-white tracking-wide">
-
                     TLT<span class="text-ai-secondary">.AI</span>
-
                 </div>
-
                 <div class="hidden md:block">
-
                     <div class="ml-10 flex items-baseline space-x-8">
-
                         <a href="#about" class="hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">About Me</a>
-
                         <a href="#course" class="hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">The Course</a>
-
                         <a href="#portfolio" class="bg-ai-secondary/20 text-ai-secondary hover:bg-ai-secondary/30 border border-ai-secondary/50 px-4 py-2 rounded-full text-sm font-medium transition-all">My Work</a>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </nav>
 
-
-
     <!-- Hero Section -->
-
     <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-
         <!-- Background decorative blobs -->
-
         <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl -z-10 animate-pulse"></div>
-
         <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl -z-10"></div>
 
-
-
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-
             
-
             <!-- User Avatar -->
-
             <div class="mb-8 relative inline-block">
-
                 <div class="absolute inset-0 bg-ai-secondary blur-xl opacity-20 rounded-full"></div>
-
                 <img src="https://github.com/tunlinnthein/graph-ai-portfolio/blob/main/T2.jpg?raw=true" 
-
                      alt="Tun Linn Thein" 
-
                      class="relative w-32 h-32 mx-auto rounded-full border-4 border-white/10 shadow-2xl object-cover">
-
             </div>
-
-
 
             <h1 class="text-5xl md:text-7xl font-bold font-heading text-white mb-6 tracking-tight">
-
                 Generative AI for <br/>
-
                 <span class="gradient-text">Work & Research</span>
-
             </h1>
-
             <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-400">
-
                 A digital portfolio documenting my journey in mastering no-code AI tools, automation, and advanced data analysis for clinical research.
-
             </p>
-
             <div class="mt-10 flex justify-center gap-4">
-
                 <a href="#portfolio" class="px-8 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow-lg shadow-purple-900/50 hover:shadow-purple-900/70 transition-all hover:scale-105">
-
                     View Submissions
-
                 </a>
-
                 <a href="#about" class="px-8 py-3 rounded-full glass-card text-white font-semibold hover:bg-white/5 transition-all">
-
                     About Tun Linn
-
                 </a>
-
             </div>
-
         </div>
-
     </section>
-
-
 
     <!-- About Me Section -->
-
     <section id="about" class="py-20 relative">
-
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
                 <!-- Image/Visual Column -->
-
                 <div class="relative order-2 lg:order-1">
-
                     <div class="absolute inset-0 bg-gradient-to-tr from-blue-600 to-purple-600 rounded-2xl transform rotate-3 blur opacity-30"></div>
-
                     <div class="relative glass-card rounded-2xl p-2 h-full min-h-[400px] flex items-center justify-center bg-slate-900">
-
                         
-
                         <div class="text-center">
-
                             <!-- User Image -->
-
                             <img src="https://github.com/tunlinnthein/graph-ai-portfolio/blob/main/T2.jpg?raw=true" 
-
                                  alt="Tun Linn Thein" 
-
                                  class="w-40 h-40 mx-auto rounded-full border-4 border-ai-secondary shadow-2xl mb-6 object-cover">
 
-
-
                             <h3 class="text-2xl font-bold text-white">Tun Linn Thein</h3>
-
                             <p class="text-ai-secondary">Senior Research Fellow</p>
-
                             <p class="text-sm text-slate-500 mt-1">IDRTO, NCID Singapore</p>
-
                             
-
                             <div class="mt-6 flex justify-center space-x-4">
-
                                 <div class="bg-slate-800 px-4 py-2 rounded-lg text-center">
-
                                     <span class="block text-xl font-bold text-white">12+</span>
-
                                     <span class="text-xs text-slate-400">Years Exp.</span>
-
                                 </div>
-
                                 <div class="bg-slate-800 px-4 py-2 rounded-lg text-center">
-
                                     <span class="block text-xl font-bold text-white">50+</span>
-
                                     <span class="text-xs text-slate-400">Publications</span>
-
                                 </div>
-
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
-
 
                 <!-- Text Column -->
-
                 <div class="order-1 lg:order-2">
-
                     <h2 class="text-sm font-bold text-ai-accent uppercase tracking-wider mb-2">About Me</h2>
-
                     <h3 class="text-3xl md:text-4xl font-heading font-bold text-white mb-6">Bridging Clinical Research & Artificial Intelligence</h3>
-
                     
-
                     <div class="space-y-4 text-slate-400 leading-relaxed">
-
                         <p>
-
                             I am a Senior Research Fellow at the Infectious Disease Research and Training Office (IDRTO), National Centre for Infectious Diseases (NCID) in Singapore. My work sits at the intersection of epidemiology, clinical trials, and public health.
-
                         </p>
-
                         <p>
-
                             With over 12 years of experience spanning from epidemiological surveys to clinical trials, I specialize in dengue and emerging infectious diseases. I oversee research databases, ensure data integrity, and manage complex quantitative and qualitative studies.
-
                         </p>
-
                         <p>
-
                             Currently, I am expanding my toolkit to include <strong>Generative AI</strong> to revolutionize how we handle research data, automate literature reviews, and enhance scientific communication.
-
                         </p>
-
                     </div>
-
-
 
                     <div class="mt-8 flex flex-wrap gap-3">
-
                         <span class="px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-sm text-slate-300">Dengue Research</span>
-
                         <span class="px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-sm text-slate-300">Epidemiology</span>
-
                         <span class="px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-sm text-slate-300">Clinical Trials</span>
-
                         <span class="px-3 py-1 rounded-full bg-blue-900/30 border border-blue-500/30 text-sm text-blue-300">Generative AI</span>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
-
-
 
     <!-- About the Course -->
-
     <section id="course" class="py-20 bg-slate-900/50">
-
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
             <div class="text-center mb-16">
-
                 <h2 class="text-sm font-bold text-ai-secondary uppercase tracking-wider mb-2">The Curriculum</h2>
-
                 <h3 class="text-3xl md:text-4xl font-heading font-bold text-white">Generative AI for Work & Research</h3>
-
                 <p class="mt-4 text-slate-400 max-w-2xl mx-auto">
-
                     An 8-week intensive cohort course by The GRAPH Courses, focusing on no-code AI tools for task automation and research productivity.
-
                 </p>
-
             </div>
-
-
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
                 <!-- Module 1 -->
-
                 <div class="glass-card p-6 rounded-xl hover-card">
-
                     <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 text-blue-400">
-
                         <i class="fas fa-file-code text-xl"></i>
-
                     </div>
-
                     <h4 class="text-xl font-bold text-white mb-2">Module 1: Foundations</h4>
-
                     <p class="text-sm text-slate-400 mb-2">Websites, Documents & Presentations</p>
-
                     <ul class="text-sm text-slate-500 space-y-1 list-disc list-inside">
-
                         <li>LLM fundamentals</li>
-
                         <li>Markdown, LaTeX & HTML</li>
-
                         <li>Building research websites</li>
-
                     </ul>
-
                 </div>
-
-
 
                 <!-- Module 2 -->
-
                 <div class="glass-card p-6 rounded-xl hover-card">
-
                     <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4 text-purple-400">
-
                         <i class="fas fa-chart-pie text-xl"></i>
-
                     </div>
-
                     <h4 class="text-xl font-bold text-white mb-2">Module 2: Data Analysis</h4>
-
                     <p class="text-sm text-slate-400 mb-2">AI-Automated Analysis</p>
-
                     <ul class="text-sm text-slate-500 space-y-1 list-disc list-inside">
-
                         <li>ChatGPT Code Interpreter</li>
-
                         <li>Automated Dashboards</li>
-
                         <li>Batch file processing</li>
-
                     </ul>
-
                 </div>
-
-
 
                 <!-- Module 3 -->
-
                 <div class="glass-card p-6 rounded-xl hover-card">
-
                     <div class="w-12 h-12 bg-teal-500/20 rounded-lg flex items-center justify-center mb-4 text-teal-400">
-
                         <i class="fas fa-search text-xl"></i>
-
                     </div>
-
                     <h4 class="text-xl font-bold text-white mb-2">Module 3: Text Analysis</h4>
-
                     <p class="text-sm text-slate-400 mb-2">Literature Review & Synthesis</p>
-
                     <ul class="text-sm text-slate-500 space-y-1 list-disc list-inside">
-
                         <li>Efficient literature search</li>
-
                         <li>Automated summarization</li>
-
                         <li>Knowledge mapping</li>
-
                     </ul>
-
                 </div>
-
-
 
                 <!-- Module 4 -->
-
                 <div class="glass-card p-6 rounded-xl hover-card">
-
                     <div class="w-12 h-12 bg-pink-500/20 rounded-lg flex items-center justify-center mb-4 text-pink-400">
-
                         <i class="fas fa-robot text-xl"></i>
-
                     </div>
-
                     <h4 class="text-xl font-bold text-white mb-2">Module 4: Custom Bots</h4>
-
                     <p class="text-sm text-slate-400 mb-2">Custom GPTs & Chatbots</p>
-
                     <ul class="text-sm text-slate-500 space-y-1 list-disc list-inside">
-
                         <li>RAG Systems</li>
-
                         <li>Building custom GPTs</li>
-
                         <li>Research Assistants</li>
-
                     </ul>
-
                 </div>
-
-
 
                 <!-- Module 5 -->
-
                 <div class="glass-card p-6 rounded-xl hover-card">
-
                     <div class="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center mb-4 text-orange-400">
-
                         <i class="fas fa-cogs text-xl"></i>
-
                     </div>
-
                     <h4 class="text-xl font-bold text-white mb-2">Module 5: Automation</h4>
-
                     <p class="text-sm text-slate-400 mb-2">Task Automation Flows</p>
-
                     <ul class="text-sm text-slate-500 space-y-1 list-disc list-inside">
-
                         <li>Email automation</li>
-
                         <li>AI Agents</li>
-
                         <li>Complex workflows</li>
-
                     </ul>
-
                 </div>
-
-
 
                 <!-- Module 6 & 7 -->
-
                 <div class="glass-card p-6 rounded-xl hover-card bg-gradient-to-br from-slate-800 to-slate-900 border-ai-secondary/30">
-
                     <div class="w-12 h-12 bg-indigo-500/20 rounded-lg flex items-center justify-center mb-4 text-indigo-400">
-
                         <i class="fas fa-bullhorn text-xl"></i>
-
                     </div>
-
                     <h4 class="text-xl font-bold text-white mb-2">Outreach & Capstone</h4>
-
                     <p class="text-sm text-slate-400 mb-2">Communication & Final Project</p>
-
                     <ul class="text-sm text-slate-500 space-y-1 list-disc list-inside">
-
                         <li>Visuals & Video Abstracts</li>
-
                         <li>Capstone Project Showcase</li>
-
                     </ul>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
-
-
 
     <!-- Weekly Submissions Portfolio -->
-
     <section id="portfolio" class="py-20">
-
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
             <div class="flex flex-col md:flex-row justify-between items-end mb-12">
-
                 <div>
-
                     <h2 class="text-sm font-bold text-ai-accent uppercase tracking-wider mb-2">My Portfolio</h2>
-
                     <h3 class="text-3xl md:text-4xl font-heading font-bold text-white">Weekly Submissions</h3>
-
                 </div>
-
                 <div class="mt-4 md:mt-0">
-
                     <p class="text-slate-400 text-sm text-right">Updated weekly throughout the course</p>
-
                 </div>
-
             </div>
-
-
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
                 <!-- Week 1 -->
-
                 <a href="#" class="group relative block h-64">
-
                     <div class="absolute inset-0 border-2 border-dashed border-slate-700 rounded-2xl group-hover:border-ai-primary transition-colors"></div>
-
                     <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
-
                         <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center mb-3 group-hover:bg-ai-primary group-hover:text-white transition-colors">
-
                             <span class="font-bold font-heading">01</span>
-
                         </div>
-
                         <h4 class="text-lg font-bold text-white group-hover:text-ai-primary transition-colors">Websites & Docs</h4>
-
                         <p class="text-xs text-slate-500 mt-2 px-2">Building this portfolio and mastering Markdown.</p>
-
                         <span class="mt-4 text-xs font-semibold text-ai-secondary opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all">View Submission &rarr;</span>
-
                     </div>
-
                 </a>
-
-
 
                 <!-- Week 2 (Updated) -->
-
                 <a href="https://github.com/tunlinnthein/graph-ai-portfolio/blob/main/Week%202%20workshop%2C%20Tun%20Linn%20Thein%2C%2028%20Jan%202026.pdf" target="_blank" class="group relative block h-64">
-
                     <div class="absolute inset-0 border-2 border-dashed border-slate-700 rounded-2xl group-hover:border-ai-primary transition-colors"></div>
-
                     <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
-
                         <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center mb-3 group-hover:bg-ai-primary group-hover:text-white transition-colors">
-
                             <span class="font-bold font-heading">02</span>
-
                         </div>
-
                         <h4 class="text-lg font-bold text-white group-hover:text-ai-primary transition-colors">Automated Data Analysis</h4>
-
                         <p class="text-xs text-slate-500 mt-2 px-2">Analyzed Gapminder data to explore relationships between two global indicators using AI tools.</p>
-
                         <span class="mt-4 text-xs font-semibold text-ai-secondary opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all">View Submission &rarr;</span>
-
                     </div>
-
                 </a>
 
-
-
-                <!-- Week 3 -->
-
-                <a href="#" class="group relative block h-64">
-
+                <!-- Week 3 (NEWLY UPDATED) -->
+                <a href="https://github.com/tunlinnthein/graph-ai-portfolio/blob/main/Week%203%20workshop%2C%20Tun%20Linn%20Thein%2C%204%20Feb%202026.pdf" target="_blank" class="group relative block h-64">
                     <div class="absolute inset-0 border-2 border-dashed border-slate-700 rounded-2xl group-hover:border-ai-primary transition-colors"></div>
-
                     <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
-
                         <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center mb-3 group-hover:bg-ai-primary group-hover:text-white transition-colors">
-
                             <span class="font-bold font-heading">03</span>
-
                         </div>
-
-                        <h4 class="text-lg font-bold text-white group-hover:text-ai-primary transition-colors">Text Analysis</h4>
-
-                        <p class="text-xs text-slate-500 mt-2 px-2">Literature review automation and synthesis.</p>
-
-                        <span class="mt-4 text-xs font-semibold text-ai-secondary opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all">Coming Soon</span>
-
+                        <h4 class="text-lg font-bold text-white group-hover:text-ai-primary transition-colors">Job Market Analysis</h4>
+                        <p class="text-xs text-slate-500 mt-2 px-2">Used LLMs in Google Sheets to extract job data, then analyzed relationships between experience, programming languages, and salaries.</p>
+                        <span class="mt-4 text-xs font-semibold text-ai-secondary opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all">View Submission &rarr;</span>
                     </div>
-
                 </a>
-
-
 
                 <!-- Week 4 -->
-
                 <a href="#" class="group relative block h-64">
-
                     <div class="absolute inset-0 border-2 border-dashed border-slate-700 rounded-2xl group-hover:border-ai-primary transition-colors"></div>
-
                     <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
-
                         <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center mb-3 group-hover:bg-ai-primary group-hover:text-white transition-colors">
-
                             <span class="font-bold font-heading">04</span>
-
                         </div>
-
                         <h4 class="text-lg font-bold text-white group-hover:text-ai-primary transition-colors">Custom Chatbots</h4>
-
                         <p class="text-xs text-slate-500 mt-2 px-2">Building a custom RAG agent for research.</p>
-
                         <span class="mt-4 text-xs font-semibold text-ai-secondary opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all">Coming Soon</span>
-
                     </div>
-
                 </a>
-
-
 
                 <!-- Week 5 -->
-
                 <a href="#" class="group relative block h-64">
-
                     <div class="absolute inset-0 border-2 border-dashed border-slate-700 rounded-2xl group-hover:border-ai-primary transition-colors"></div>
-
                     <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
-
                         <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center mb-3 group-hover:bg-ai-primary group-hover:text-white transition-colors">
-
                             <span class="font-bold font-heading">05</span>
-
                         </div>
-
                         <h4 class="text-lg font-bold text-white group-hover:text-ai-primary transition-colors">Task Automation</h4>
-
                         <p class="text-xs text-slate-500 mt-2 px-2">Workflow automation and email agents.</p>
-
                         <span class="mt-4 text-xs font-semibold text-ai-secondary opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all">Coming Soon</span>
-
                     </div>
-
                 </a>
-
-
 
                 <!-- Week 6 -->
-
                 <a href="#" class="group relative block h-64">
-
                     <div class="absolute inset-0 border-2 border-dashed border-slate-700 rounded-2xl group-hover:border-ai-primary transition-colors"></div>
-
                     <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
-
                         <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center mb-3 group-hover:bg-ai-primary group-hover:text-white transition-colors">
-
                             <span class="font-bold font-heading">06</span>
-
                         </div>
-
                         <h4 class="text-lg font-bold text-white group-hover:text-ai-primary transition-colors">Communication</h4>
-
                         <p class="text-xs text-slate-500 mt-2 px-2">AI for outreach and scientific visuals.</p>
-
                         <span class="mt-4 text-xs font-semibold text-ai-secondary opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all">Coming Soon</span>
-
                     </div>
-
                 </a>
-
-
 
                 <!-- Capstone -->
-
                 <a href="#" class="group relative block h-64 col-span-1 md:col-span-2 bg-gradient-to-r from-ai-secondary/10 to-blue-500/10 rounded-2xl border border-ai-secondary/30">
-
                     <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
-
                         <div class="inline-block px-3 py-1 rounded-full bg-ai-secondary text-white text-xs font-bold mb-4">
-
                             FINAL PROJECT
-
                         </div>
-
                         <h4 class="text-2xl font-bold text-white group-hover:text-ai-primary transition-colors">Capstone Project</h4>
-
                         <p class="text-sm text-slate-400 mt-2 max-w-sm">
-
                             A comprehensive AI solution applied to infectious disease research.
-
                         </p>
-
                         <div class="mt-6 flex items-center gap-2 text-sm text-ai-secondary font-medium group-hover:translate-x-2 transition-transform">
-
                             View Project Details <i class="fas fa-arrow-right"></i>
-
                         </div>
-
                     </div>
-
                 </a>
-
             </div>
-
         </div>
-
     </section>
 
-
-
     <!-- Footer -->
-
     <footer class="border-t border-white/10 bg-black/20 backdrop-blur-sm py-12">
-
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
-
             <div class="mb-4 md:mb-0">
-
                 <span class="font-heading font-bold text-xl text-white tracking-wide">
-
                     TLT<span class="text-ai-secondary">.AI</span>
-
                 </span>
-
                 <p class="text-xs text-slate-500 mt-1">© 2025 Tun Linn Thein. All rights reserved.</p>
-
             </div>
-
             
-
             <div class="flex space-x-6">
-
                 <!-- Social Links (Placeholders) -->
-
                 <a href="#" class="text-slate-400 hover:text-white transition-colors">
-
                     <i class="fab fa-linkedin text-xl"></i>
-
                 </a>
-
                 <a href="#" class="text-slate-400 hover:text-white transition-colors">
-
                     <i class="fab fa-github text-xl"></i>
-
                 </a>
-
                 <a href="#" class="text-slate-400 hover:text-white transition-colors">
-
                     <i class="fas fa-globe text-xl"></i>
-
                 </a>
-
             </div>
-
         </div>
-
     </footer>
 
-
-
 </body>
-
 </html>
